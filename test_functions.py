@@ -9,11 +9,17 @@ def test_add():
 
 
 def test_subtract():
+    assert subtract(3,2) == 1
     assert subtract(3, 2) == 1
+
 
 
 def test_convert_fahrenheit_to_celsius():
     assert f2c(32) == 0
     assert f2c(122) == pytest.approx(50)
+    with pytest.raises(AssertionError):
+        f2c(-600)
     assert f2c(-600) == pytest.approx(-351.11, rel=1e-2)  # ±1% tolerance
 
+def test_multiply():
+    assert multiply(10,3) == 30
