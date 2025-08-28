@@ -16,4 +16,4 @@ def test_add():
     assert f2c(32) == 0
     assert f2c(122) == pytest.approx(50)
     with pytest.raises(AssertionError):
-        f2c(-600)
+    f2c(-600)
